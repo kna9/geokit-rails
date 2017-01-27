@@ -35,8 +35,9 @@ module Geokit
             self.distance_column_name = options[:distance_column_name]  || 'distance'
             self.default_units = options[:default_units] || Geokit::default_units
             self.default_formula = options[:default_formula] || Geokit::default_formula
-            self.lat_column_name = options[:lat_column_name] || 'lat'
-            self.lng_column_name = options[:lng_column_name] || 'lng'
+            self.lat_column_name = 'lat'
+            self.lng_column_name = 'long'
+
             self.skip_loading = options[:skip_loading]
             self.qualified_lat_column_name = "#{table_name}.#{lat_column_name}"
             self.qualified_lng_column_name = "#{table_name}.#{lng_column_name}"
